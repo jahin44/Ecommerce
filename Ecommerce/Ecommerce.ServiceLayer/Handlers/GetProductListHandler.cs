@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Ecommerce.ServiceLayer.Queries.Queries;
+using static Ecommerce.ServiceLayer.CQRS.Queries;
 
 namespace Ecommerce.ServiceLayer.Handlers
 {
@@ -16,6 +16,7 @@ namespace Ecommerce.ServiceLayer.Handlers
         {
             _dataAccess = dataAccess;
         }
+
         public Task<List<Product>> Handle(GetProductListQuery request, CancellationToken cancellationToken)
         {
             return Task.FromResult(_dataAccess.GetProduct());

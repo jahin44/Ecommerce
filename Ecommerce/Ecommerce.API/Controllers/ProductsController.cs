@@ -2,7 +2,8 @@
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using static Ecommerce.ServiceLayer.Queries.Queries;
+using static Ecommerce.ServiceLayer.CQRS.Commands;
+using static Ecommerce.ServiceLayer.CQRS.Queries;
 
 namespace Ecommerce.API.Controllers
 {
@@ -20,6 +21,18 @@ namespace Ecommerce.API.Controllers
         public async Task<List<Product>> Get()
         {
             return await _mediator.Send(new GetProductListQuery());
+        }
+        
+        [HttpGet("{Id}")]
+        public async Task<Product> Get(int Id)
+        {
+            return await _mediator.Send(new GetProductByIdQuery(Id));
+        }
+        
+        [HttpPost]
+        public async Task<Product> Post([FromBody] Product product)
+        {
+            return await _mediator.Send(new AddProductCommand(product.Name, product.Quantity, product.Price));
         }
     }
 }

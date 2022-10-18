@@ -6,10 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ecommerce.ServiceLayer.Queries
+namespace Ecommerce.ServiceLayer.CQRS
 {
     public class Queries
     {
         public record GetProductListQuery(): IRequest<List<Product>>;
+        public record GetProductByIdQuery(int Id): IRequest<Product>;
     }
 }
