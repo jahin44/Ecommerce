@@ -3,6 +3,8 @@ using Autofac.Extensions.DependencyInjection;
 using Ecommerce.API;
 using Ecommerce.API.Context;
 using Ecommerce.API.Models;
+using Ecommerce.ServiceLayer;
+using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +26,8 @@ builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
     containerBuilder.RegisterModule(new EcommerceApiModule());
 
 });
+builder.Services.AddScoped<IDataAccess, DataAccess>();
+builder.Services.AddMediatR(typeof(DataAccess).Assembly);
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<UserDbContext>()

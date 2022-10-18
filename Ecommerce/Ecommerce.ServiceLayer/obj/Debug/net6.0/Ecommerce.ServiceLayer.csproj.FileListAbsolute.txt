@@ -1,0 +1,12 @@
+D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\bin\Debug\net6.0\Ecommerce.ServiceLayer.deps.json
+D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\bin\Debug\net6.0\Ecommerce.ServiceLayer.dll
+D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\bin\Debug\net6.0\Ecommerce.ServiceLayer.pdb
+D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\obj\Debug\net6.0\Ecommerce.ServiceLayer.csproj.AssemblyReference.cache
+D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\obj\Debug\net6.0\Ecommerce.ServiceLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\obj\Debug\net6.0\Ecommerce.ServiceLayer.AssemblyInfoInputs.cache
+D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\obj\Debug\net6.0\Ecommerce.ServiceLayer.AssemblyInfo.cs
+D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\obj\Debug\net6.0\Ecommerce.ServiceLayer.csproj.CoreCompileInputs.cache
+D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\obj\Debug\net6.0\Ecommerce.ServiceLayer.dll
+D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\obj\Debug\net6.0\refint\Ecommerce.ServiceLayer.dll
+D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\obj\Debug\net6.0\Ecommerce.ServiceLayer.pdb
+D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\obj\Debug\net6.0\ref\Ecommerce.ServiceLayer.dll
