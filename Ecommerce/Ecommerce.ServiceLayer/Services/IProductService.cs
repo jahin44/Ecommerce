@@ -13,7 +13,7 @@ namespace Ecommerce.ServiceLayer.Services
         Task<Product> AddProduct(Product product);
         Task<Product> UpdateProduct(Product product);
         Product GetProductById(int id);
-        void DeleteProduct(int id);
+        void DeleteProduct(Product product);
 
 
     }

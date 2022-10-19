@@ -20,9 +20,13 @@ namespace Ecommerce.ServiceLayer.Services
           return await _repository.AddAsync(product);
         }
 
-        public void DeleteProduct(int id)
+        public void DeleteProduct(Product product)
         {
-            throw new NotImplementedException();
+            if(product== null) 
+            {
+                throw new Exception("product not found");
+            }
+            _repository.Delete(product);
         }
 
         public Product GetProductById(int id)

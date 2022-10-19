@@ -57,6 +57,22 @@ namespace Ecommerce.API.Controllers
             }
             return product ;
 
+        } 
+        
+        [HttpDelete("{Id}")]
+        public async Task Delete( int Id)
+        {
+            try
+            {
+                if (Id!= 0)
+                {
+                   await _mediator.Send(new DeleteProductCommand(Id));
+                }
+            }catch (Exception ex)
+            {
+               _logger.LogError(ex, "Update Failed");
+                
+            }
         }
     }
 }

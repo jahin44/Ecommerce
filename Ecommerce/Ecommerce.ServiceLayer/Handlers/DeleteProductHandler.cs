@@ -11,38 +11,33 @@ using static Ecommerce.ServiceLayer.CQRS.Queries;
 
 namespace Ecommerce.ServiceLayer.Handlers
 {
-    public class UpdateProductHandleer : IRequestHandler<UpdateProductCommand, Product>
+    public class DeleteProductHandler : IRequestHandler<DeleteProductCommand,Product>
     {
         private readonly IProductService _productService;
         private readonly IMediator _mediator;
 
-        public UpdateProductHandleer(IProductService productService,
+        public DeleteProductHandler(IProductService productService,
                                      IMediator mediator)
         {
             _productService = productService;
             _mediator = mediator;
         }
 
-        public async Task<Product> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
+        public async Task<Product> Handle(DeleteProductCommand request, CancellationToken cancellationToken)
         {
-            if (request.product == null)
-            {
-                throw new Exception("product Empty");
-            }
-          
-            var product = await _mediator.Send(new GetProductByIdQuery(request.product.Id));
-           
-            if(product == null)
+            if (request.Id == null)
             {
                 throw new Exception("product Empty");
             }
 
-            product.Name = request.product.Name;
-            product.Quantity= request.product.Quantity;
-            product.Price = request.product.Price;
+            var product = await _mediator.Send(new GetProductByIdQuery(request.Id));
 
-            return await _productService.UpdateProduct(product);
+            if (product == null)
+            {
+                throw new Exception("product Empty");
+            }
+             _productService.DeleteProduct(product);
+            return product;
         }
-        
     }
 }
