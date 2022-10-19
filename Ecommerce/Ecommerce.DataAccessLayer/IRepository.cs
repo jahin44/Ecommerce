@@ -4,8 +4,8 @@
     {
         IList<TEntity> GetAll();
         TEntity GetById(int id);
-        Task AddAsync(TEntity entity);
-        void Update(TEntity entity);
+        Task<TEntity> AddAsync(TEntity entity);
+        Task<TEntity> Update(TEntity entity);
         void Delete(TEntity entity);
 
 

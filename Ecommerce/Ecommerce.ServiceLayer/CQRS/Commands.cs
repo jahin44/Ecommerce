@@ -11,6 +11,7 @@ namespace Ecommerce.ServiceLayer.CQRS
     public class Commands
     {
         public record AddProductCommand(Product product) : IRequest<Product>;
+        public record UpdateProductCommand(Product product) : IRequest<Product>;
 
     }
 }

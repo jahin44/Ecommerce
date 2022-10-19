@@ -3,6 +3,7 @@ using Ecommerce.ServiceLayer.Services;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 using static Ecommerce.ServiceLayer.CQRS.Commands;
 using static Ecommerce.ServiceLayer.CQRS.Queries;
 
@@ -12,6 +13,7 @@ namespace Ecommerce.API.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
+        private readonly ILogger<ProductsController> _logger;
         private readonly IMediator _mediator;
         private readonly IProductService _productService;
 
@@ -37,6 +39,24 @@ namespace Ecommerce.API.Controllers
         public async Task<Product> Post([FromBody] Product product)
         {
             return await _mediator.Send(new AddProductCommand(product));
+        }
+        
+        [HttpPut]
+        public async Task<Product> Update([FromBody] Product product)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    return await _mediator.Send(new UpdateProductCommand(product));
+                }
+            }catch (Exception ex)
+            {
+               _logger.LogError(ex, "Update Failed");
+                
+            }
+            return product ;
+
         }
     }
 }

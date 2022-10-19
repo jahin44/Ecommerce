@@ -10,7 +10,8 @@ namespace Ecommerce.ServiceLayer.Services
     public interface IProductService
     {
         List<Product> GetProducts();
-        void UpdateProduct(Product product);
+        Task<Product> AddProduct(Product product);
+        Task<Product> UpdateProduct(Product product);
         Product GetProductById(int id);
         void DeleteProduct(int id);
 

@@ -15,9 +15,9 @@ namespace Ecommerce.ServiceLayer.Services
         {
             _repository = repository;
         }
-        public void AddProduct(Product product)
+        public async Task<Product> AddProduct(Product product)
         {
-          
+          return await _repository.AddAsync(product);
         }
 
         public void DeleteProduct(int id)
@@ -35,9 +35,9 @@ namespace Ecommerce.ServiceLayer.Services
            return (List<Product>)_repository.GetAll();
         }
 
-        public void UpdateProduct(Product product)
+        public async Task<Product> UpdateProduct(Product product)
         {
-            throw new NotImplementedException();
+            return await _repository.Update(product);
         }
     }
 }

@@ -36,16 +36,22 @@ namespace Ecommerce.DataAccessLayer
             return  _dbSet.Find(Id);
         }
 
-        public void Update(TEntity entity)
+        public async Task<TEntity> Update(TEntity entity)
         {
+            if (_dbcontext.Entry(entity).State == EntityState.Detached)
+            {
+                _dbSet.Attach(entity);
+            }
             _dbSet.Update(entity);
             _dbcontext.SaveChanges();
+            return entity;
         }
 
-        public async Task AddAsync(TEntity entity)
+        public async Task<TEntity> AddAsync(TEntity entity)
         {
             await _dbSet.AddAsync(entity);
             _dbcontext.SaveChanges();
+            return entity;
         }
     }
 }

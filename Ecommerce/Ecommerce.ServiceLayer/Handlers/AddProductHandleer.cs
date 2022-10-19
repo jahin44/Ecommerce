@@ -1,5 +1,6 @@
 ﻿using Ecommerce.ServiceLayer.Model;
 using Ecommerce.ServiceLayer.Repositories;
+using Ecommerce.ServiceLayer.Services;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -12,16 +13,16 @@ namespace Ecommerce.ServiceLayer.Handlers
 {
     public class AddProductHandleer : IRequestHandler<AddProductCommand, Product>
     {
-        private readonly IProductRepository _productRepository;
+        private readonly IProductService _productService;
 
-        public AddProductHandleer(IProductRepository productRepository)
+        public AddProductHandleer(IProductService productService)
         {
-            _productRepository = productRepository;
+            _productService = productService;
         }
 
-        public Task<Product> Handle(AddProductCommand request, CancellationToken cancellationToken)
+        public async Task<Product> Handle(AddProductCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await _productService.AddProduct(request.product);
         }
     }
 }
