@@ -10,7 +10,7 @@ namespace Ecommerce.ServiceLayer.CQRS
 {
     public class Commands
     {
-        public record AddProductCommand(string Name, int Quentity, decimal Price) : IRequest<Product>;
+        public record AddProductCommand(Product product) : IRequest<Product>;
 
     }
 }

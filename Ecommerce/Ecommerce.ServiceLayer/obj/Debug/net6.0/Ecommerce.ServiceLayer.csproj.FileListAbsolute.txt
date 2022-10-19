@@ -10,3 +10,6 @@ D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\obj\Debug\net6.0\Ecommerce.Service
 D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\obj\Debug\net6.0\refint\Ecommerce.ServiceLayer.dll
 D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\obj\Debug\net6.0\Ecommerce.ServiceLayer.pdb
 D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\obj\Debug\net6.0\ref\Ecommerce.ServiceLayer.dll
+D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\bin\Debug\net6.0\Ecommerce.DataAccessLayer.dll
+D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\bin\Debug\net6.0\Ecommerce.DataAccessLayer.pdb
+D:\Ecommerce\Ecommerce\Ecommerce.ServiceLayer\obj\Debug\net6.0\Ecommerce.ServiceLayer.csproj.CopyComplete

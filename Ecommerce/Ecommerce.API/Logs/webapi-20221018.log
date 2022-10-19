@@ -465,3 +465,27 @@ WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
 [2022-10-18 14:21:50.303 +06:00  INF]  Executed action Ecommerce.API.Controllers.ProductsController.Post (Ecommerce.API) in 59403.1357ms
 [2022-10-18 14:21:50.303 +06:00  INF]  Executed endpoint 'Ecommerce.API.Controllers.ProductsController.Post (Ecommerce.API)'
 [2022-10-18 14:21:50.303 +06:00  INF]  Request finished HTTP/2 POST https://localhost:7137/api/Products application/json 110 - 200 - application/json;+charset=utf-8 59405.2020ms
+[2022-10-18 16:14:36.079 +06:00  INF]  User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-10-18 16:14:37.952 +06:00  INF]  Entity Framework Core 6.0.10 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-10-18 16:14:40.199 +06:00  INF]  Executed DbCommand (280ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+[2022-10-18 16:14:41.219 +06:00  INF]  Now listening on: https://localhost:7137
+[2022-10-18 16:14:41.219 +06:00  INF]  Now listening on: http://localhost:5137
+[2022-10-18 16:14:41.219 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-18 16:14:41.219 +06:00  INF]  Hosting environment: Development
+[2022-10-18 16:14:41.219 +06:00  INF]  Content root path: D:\Ecommerce\Ecommerce\Ecommerce.API\
+[2022-10-18 16:14:44.353 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7137/swagger/index.html - -
+[2022-10-18 16:14:45.579 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7137/swagger/index.html - - - 200 - text/html;charset=utf-8 1230.3976ms
+[2022-10-18 16:14:46.133 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7137/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-18 16:14:46.146 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7137/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 13.7177ms
+[2022-10-18 16:14:46.947 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7137/swagger/v1/swagger.json - -
+[2022-10-18 16:14:47.225 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7137/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 277.9840ms
+[2022-10-18 16:15:22.757 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7137/api/Products - -
+[2022-10-18 16:15:25.830 +06:00  INF]  Executing endpoint 'Ecommerce.API.Controllers.ProductsController.Get (Ecommerce.API)'
+[2022-10-18 16:15:25.910 +06:00  INF]  Route matched with {action = "Get", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Ecommerce.ServiceLayer.Model.Product]] Get() on controller Ecommerce.API.Controllers.ProductsController (Ecommerce.API).
+[2022-10-18 16:15:26.063 +06:00  INF]  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.ServiceLayer.Model.Product, Ecommerce.ServiceLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-10-18 16:15:26.128 +06:00  INF]  Executed action Ecommerce.API.Controllers.ProductsController.Get (Ecommerce.API) in 205.3741ms
+[2022-10-18 16:15:26.140 +06:00  INF]  Executed endpoint 'Ecommerce.API.Controllers.ProductsController.Get (Ecommerce.API)'
+[2022-10-18 16:15:26.140 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7137/api/Products - - - 200 - application/json;+charset=utf-8 3385.5901ms

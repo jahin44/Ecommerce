@@ -4,6 +4,8 @@ using Ecommerce.API;
 using Ecommerce.API.Context;
 using Ecommerce.API.Models;
 using Ecommerce.ServiceLayer;
+using Ecommerce.ServiceLayer.Repositories;
+using Ecommerce.ServiceLayer.Services;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -23,11 +25,12 @@ builder.Services.AddDbContext<UserDbContext>(options => options.UseSqlServer(con
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
 {
-    containerBuilder.RegisterModule(new EcommerceApiModule());
+    containerBuilder.RegisterModule(new EcommerceApiModule(connectionString, assemblyName));
+    containerBuilder.RegisterModule(new ServiceLayerModule());
 
 });
-builder.Services.AddScoped<IDataAccess, DataAccess>();
-builder.Services.AddMediatR(typeof(DataAccess).Assembly);
+//builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddMediatR(typeof(ProductService).Assembly);
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<UserDbContext>()

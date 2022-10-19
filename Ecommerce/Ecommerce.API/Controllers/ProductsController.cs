@@ -1,4 +1,5 @@
 ﻿using Ecommerce.ServiceLayer.Model;
+using Ecommerce.ServiceLayer.Services;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,10 +13,12 @@ namespace Ecommerce.API.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly IProductService _productService;
 
-        public ProductsController(IMediator mediator)
+        public ProductsController(IMediator mediator, IProductService productService)
         {
             _mediator = mediator;
+            _productService = productService;
         }
         [HttpGet]
         public async Task<List<Product>> Get()
@@ -27,12 +30,13 @@ namespace Ecommerce.API.Controllers
         public async Task<Product> Get(int Id)
         {
             return await _mediator.Send(new GetProductByIdQuery(Id));
+            
         }
         
         [HttpPost]
         public async Task<Product> Post([FromBody] Product product)
         {
-            return await _mediator.Send(new AddProductCommand(product.Name, product.Quantity, product.Price));
+            return await _mediator.Send(new AddProductCommand(product));
         }
     }
 }

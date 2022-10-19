@@ -1,4 +1,6 @@
 ﻿using Ecommerce.ServiceLayer.Model;
+using Ecommerce.ServiceLayer.Repositories;
+using Ecommerce.ServiceLayer.Services;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -11,15 +13,15 @@ namespace Ecommerce.ServiceLayer.Handlers
 {
     public class GetProductListHandler : IRequestHandler<GetProductListQuery, List<Product>>
     {
-        private readonly IDataAccess _dataAccess;
-        public GetProductListHandler (IDataAccess dataAccess)
+        private readonly IProductService _productService;
+        public GetProductListHandler(IProductService productService)
         {
-            _dataAccess = dataAccess;
+            _productService = productService;
         }
 
         public Task<List<Product>> Handle(GetProductListQuery request, CancellationToken cancellationToken)
         {
-            return Task.FromResult(_dataAccess.GetProduct());
+            return Task.FromResult(_productService.GetProducts());
         }
     }
 }

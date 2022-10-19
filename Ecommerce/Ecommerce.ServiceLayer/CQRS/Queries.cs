@@ -10,7 +10,7 @@ namespace Ecommerce.ServiceLayer.CQRS
 {
     public class Queries
     {
-        public record GetProductListQuery(): IRequest<List<Product>>;
-        public record GetProductByIdQuery(int Id): IRequest<Product>;
+        public record GetProductListQuery() : IRequest<List<Product>>;
+        public record GetProductByIdQuery(int Id) : IRequest<Product>;
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Ecommerce.API.Context
+﻿namespace Ecommerce.ServiceLayer.Context
 {
     public interface IApplicationDbContext
     {

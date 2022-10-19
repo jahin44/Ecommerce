@@ -311,3 +311,5 @@ D:\Ecommerce\Ecommerce\Ecommerce.API\bin\Debug\net6.0\MediatR.Contracts.dll
 D:\Ecommerce\Ecommerce\Ecommerce.API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 D:\Ecommerce\Ecommerce\Ecommerce.API\bin\Debug\net6.0\Ecommerce.ServiceLayer.dll
 D:\Ecommerce\Ecommerce\Ecommerce.API\bin\Debug\net6.0\Ecommerce.ServiceLayer.pdb
+D:\Ecommerce\Ecommerce\Ecommerce.API\bin\Debug\net6.0\Ecommerce.DataAccessLayer.dll
+D:\Ecommerce\Ecommerce\Ecommerce.API\bin\Debug\net6.0\Ecommerce.DataAccessLayer.pdb

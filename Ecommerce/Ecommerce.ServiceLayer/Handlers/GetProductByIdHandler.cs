@@ -1,4 +1,6 @@
 ﻿using Ecommerce.ServiceLayer.Model;
+using Ecommerce.ServiceLayer.Repositories;
+using Ecommerce.ServiceLayer.Services;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -12,15 +14,15 @@ namespace Ecommerce.ServiceLayer.Handlers
     public class GetProductByIdHandler : IRequestHandler<GetProductByIdQuery, Product>
     {
         private readonly IMediator _mediator;
-        public GetProductByIdHandler (IMediator mediator)
+        private readonly IProductService _productService;
+        public GetProductByIdHandler(IMediator mediator, IProductService productService)
         {
             _mediator = mediator;
+            _productService = productService;
         }
         public async Task<Product> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
         {
-            var employees =  await _mediator.Send(new GetProductListQuery());
-            var searchedProduct = employees.FirstOrDefault(x=>x.Id == request.Id);
-            return searchedProduct;
+            return _productService.GetProductById(request.Id);
         }
     }
 }
