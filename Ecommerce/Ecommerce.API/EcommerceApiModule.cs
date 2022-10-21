@@ -1,7 +1,6 @@
 ﻿using Autofac;
-using Ecommerce.API.Context;
-using Ecommerce.API.Service;
 using Ecommerce.ServiceLayer.Context;
+using Ecommerce.API.Service;
 
 namespace Ecommerce.API
 {

@@ -13,7 +13,7 @@ namespace Ecommerce.DataAccessLayer
         private readonly DbContext _dbcontext;
         protected readonly DbSet<TEntity> _dbSet;
 
-        public Repository(DbContext dbcontext)
+         public Repository(DbContext dbcontext)
         {
             _dbcontext = dbcontext;
             _dbSet = _dbcontext.Set<TEntity>();

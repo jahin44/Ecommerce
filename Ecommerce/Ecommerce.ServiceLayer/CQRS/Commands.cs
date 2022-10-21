@@ -1,4 +1,5 @@
-﻿using Ecommerce.ServiceLayer.Model;
+﻿using BO = Ecommerce.ServiceLayer.BusinessModel;
+using Ecommerce.ServiceLayer.Model;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace Ecommerce.ServiceLayer.CQRS
         public record AddProductCommand(Product product) : IRequest<Product>;
         public record UpdateProductCommand(Product product) : IRequest<Product>;
         public record DeleteProductCommand(int Id) : IRequest<Product>;
-
+        public record AddOrderCommand(BO.Order order) : IRequest<Order>;
+        public record AddOrderDetailsCommand(BO.OrderDetails orderDetails) : IRequest<OrderDetails>;
     }
 }

@@ -11,11 +11,11 @@ using static Ecommerce.ServiceLayer.CQRS.Commands;
 
 namespace Ecommerce.ServiceLayer.Handlers
 {
-    public class AddProductHandleer : IRequestHandler<AddProductCommand, Product>
+    public class AddProductHandler : IRequestHandler<AddProductCommand, Product>
     {
         private readonly IProductService _productService;
 
-        public AddProductHandleer(IProductService productService)
+        public AddProductHandler(IProductService productService)
         {
             _productService = productService;
         }

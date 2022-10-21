@@ -26,12 +26,23 @@ namespace Ecommerce.ServiceLayer.Context
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Order>()
+              .HasKey(O => O.Id);
 
+            modelBuilder.Entity<OrderDetails>()
+                .HasKey(OD => OD.Id);
+
+            modelBuilder.Entity<OrderDetails>()
+              .HasOne(OD => OD.Order)
+              .WithMany(O => O.OrderDetails)
+              .HasForeignKey(OD => OD.OrderId);
 
             base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetails> OrderDetails { get; set; }
 
     }
 }

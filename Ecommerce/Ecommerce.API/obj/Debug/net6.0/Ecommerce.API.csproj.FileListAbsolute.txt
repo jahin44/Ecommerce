@@ -295,7 +295,6 @@ D:\Ecommerce\Ecommerce\Ecommerce.API\obj\Debug\net6.0\Ecommerce.API.GeneratedMSB
 D:\Ecommerce\Ecommerce\Ecommerce.API\obj\Debug\net6.0\Ecommerce.API.AssemblyInfoInputs.cache
 D:\Ecommerce\Ecommerce\Ecommerce.API\obj\Debug\net6.0\Ecommerce.API.AssemblyInfo.cs
 D:\Ecommerce\Ecommerce\Ecommerce.API\obj\Debug\net6.0\Ecommerce.API.csproj.CoreCompileInputs.cache
-D:\Ecommerce\Ecommerce\Ecommerce.API\obj\Debug\net6.0\Ecommerce.API.MvcApplicationPartsAssemblyInfo.cs
 D:\Ecommerce\Ecommerce\Ecommerce.API\obj\Debug\net6.0\Ecommerce.API.MvcApplicationPartsAssemblyInfo.cache
 D:\Ecommerce\Ecommerce\Ecommerce.API\obj\Debug\net6.0\staticwebassets.build.json
 D:\Ecommerce\Ecommerce\Ecommerce.API\obj\Debug\net6.0\staticwebassets.development.json
@@ -313,3 +312,4 @@ D:\Ecommerce\Ecommerce\Ecommerce.API\bin\Debug\net6.0\Ecommerce.ServiceLayer.dll
 D:\Ecommerce\Ecommerce\Ecommerce.API\bin\Debug\net6.0\Ecommerce.ServiceLayer.pdb
 D:\Ecommerce\Ecommerce\Ecommerce.API\bin\Debug\net6.0\Ecommerce.DataAccessLayer.dll
 D:\Ecommerce\Ecommerce\Ecommerce.API\bin\Debug\net6.0\Ecommerce.DataAccessLayer.pdb
+D:\Ecommerce\Ecommerce\Ecommerce.API\obj\Debug\net6.0\Ecommerce.API.MvcApplicationPartsAssemblyInfo.cs

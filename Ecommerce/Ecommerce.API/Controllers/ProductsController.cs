@@ -10,19 +10,17 @@ using static Ecommerce.ServiceLayer.CQRS.Queries;
 
 namespace Ecommerce.API.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
         private readonly ILogger<ProductsController> _logger;
         private readonly IMediator _mediator;
-        private readonly IProductService _productService;
 
-        public ProductsController(IMediator mediator, IProductService productService)
+        public ProductsController(IMediator mediator)
         {
             _mediator = mediator;
-            _productService = productService;
         }
         [HttpGet]
         public async Task<List<Product>> Get()

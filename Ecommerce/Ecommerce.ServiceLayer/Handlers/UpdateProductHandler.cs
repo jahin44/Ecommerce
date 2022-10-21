@@ -11,12 +11,12 @@ using static Ecommerce.ServiceLayer.CQRS.Queries;
 
 namespace Ecommerce.ServiceLayer.Handlers
 {
-    public class UpdateProductHandleer : IRequestHandler<UpdateProductCommand, Product>
+    public class UpdateProductHandler : IRequestHandler<UpdateProductCommand, Product>
     {
         private readonly IProductService _productService;
         private readonly IMediator _mediator;
 
-        public UpdateProductHandleer(IProductService productService,
+        public UpdateProductHandler(IProductService productService,
                                      IMediator mediator)
         {
             _productService = productService;
@@ -29,20 +29,20 @@ namespace Ecommerce.ServiceLayer.Handlers
             {
                 throw new Exception("product Empty");
             }
-          
+
             var product = await _mediator.Send(new GetProductByIdQuery(request.product.Id));
-           
-            if(product == null)
+
+            if (product == null)
             {
                 throw new Exception("product Empty");
             }
 
             product.Name = request.product.Name;
-            product.Quantity= request.product.Quantity;
+            product.Stock = request.product.Stock;
             product.Price = request.product.Price;
 
             return await _productService.UpdateProduct(product);
         }
-        
+
     }
 }
