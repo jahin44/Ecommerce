@@ -6,11 +6,11 @@ import { useEffect, useState } from "react";
 const Products = ({cart,setCart}) => {
   const [productsToDisplay, setProductsToDisplay] = useState([]);
 
-  const addToCart = (id, name) => {
+  const addToCart = (id, name,price) => {
     let cartItems = [...cart];
     let isUnique = true;
     for (var i = 0; i < cartItems.length; i++) {
-      if (id === cartItems[i].productId) {
+      if (id === cartItems[i].producId) {
         isUnique = false;
         cartItems[i].quantity = cartItems[i].quantity + 1;
       }
@@ -18,7 +18,7 @@ const Products = ({cart,setCart}) => {
     if (isUnique) {
       cartItems = [
         ...cartItems,
-        { id: 0, name: name, productId: id, quantity: 1, orderId: 0 },
+        { id: 0, name: name, producId: id, quantity: 1, orderId: 0,price:price },
       ];
     }
     setCart(cartItems);

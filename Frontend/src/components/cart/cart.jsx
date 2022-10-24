@@ -7,10 +7,10 @@ const Cart = ({ product }) => {
     <a>
       <table className="tabledata">
           <td>{product.name}</td>
-          <td>{product.quantity}</td>
           <td>
             <button>+</button>
           </td>
+          <td>{product.quantity}</td>
           <td>
             <button>-</button>
           </td>

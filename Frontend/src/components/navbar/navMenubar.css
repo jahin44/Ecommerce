@@ -1,4 +1,21 @@
 /* nav component */
+.brand{
+  background-color: #ffffff; /* Green */
+  border: none;
+  color: #b50b0b;
+  padding: 0px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.brand:hover{
+  background-color: #a52020;
+  color: #f7f3f3;
+
+}
 .nav {
     display: flex;
     background-color: #fff;

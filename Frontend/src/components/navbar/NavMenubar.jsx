@@ -7,6 +7,8 @@ import {Routes, Route, useNavigate} from 'react-router-dom';
 
 
 const NavMenubar = ({ children }) => {
+const navigate = useNavigate();
+
     return (
       <>
       <nav className="nav">
@@ -15,24 +17,24 @@ const NavMenubar = ({ children }) => {
                   <h1>E-Shop</h1>
               </li>
               <li>
-                  <a onClick={() => {}} className="brand">
+                  <button onClick={() => {navigate('/')}} className="brand">
                       <h3>Dashboard</h3>
-                  </a>
+                  </button>
               </li>
               <li>
-                  <a onClick={() => {console.log("Image clicked on navbar")}} className="brand">
+                  <button onClick={() => {navigate('/Reports')}} className="brand">
                       <h3>Report</h3>
-                  </a>
+                  </button>
               </li>
               <li>
-                  <a onClick={() => {console.log("Image clicked on navbar")}} className="brand">
+                  <button onClick={() => {navigate('/AdminPanel')}} className="brand">
                       <h3>Admin Panel</h3>
-                  </a>
+                  </button>
               </li>
               <li>
-                  <a onClick={() => {console.log("Image clicked on navbar")}} className="brand">
+                  <button onClick={() => {navigate('/Login')}} className="brand">
                       <h3>Login</h3>
-                  </a>
+                  </button>
               </li>
           </ul>
       </nav>

@@ -5,7 +5,7 @@ import React, { useState } from "react";
 const Product = ({ product, addToCart }) => {
   const setToCart = () => {
     if (product.stock > 0) {
-      addToCart(product.id, product.name);
+      addToCart(product.id, product.name,product.price);
       product.stock = product.stock - 1;
     }
   };

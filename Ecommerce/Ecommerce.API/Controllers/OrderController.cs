@@ -20,13 +20,14 @@ namespace Ecommerce.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddOrder([FromBody] Order order)
+        public async Task<IActionResult> AddOrder([FromBody] List<OrderDetails> orderDetails)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-
+                    Order order = new() ;
+                    order.OrderDetails = orderDetails;
                     await _mediator.Send(new AddOrderCommand(order));
                     return Ok();
                 }
