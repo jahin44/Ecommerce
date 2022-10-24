@@ -1775,11 +1775,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Ecommerce\\Ecommerce\\Ecommerce.DataAccessLayer\\Ecommerce.DataAccessLayer.csproj",
+      "projectUniqueName": "D:\\AAAAAAAAA\\Ecommerce\\Ecommerce\\Ecommerce.DataAccessLayer\\Ecommerce.DataAccessLayer.csproj",
       "projectName": "Ecommerce.DataAccessLayer",
-      "projectPath": "D:\\Ecommerce\\Ecommerce\\Ecommerce.DataAccessLayer\\Ecommerce.DataAccessLayer.csproj",
+      "projectPath": "D:\\AAAAAAAAA\\Ecommerce\\Ecommerce\\Ecommerce.DataAccessLayer\\Ecommerce.DataAccessLayer.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Ecommerce\\Ecommerce\\Ecommerce.DataAccessLayer\\obj\\",
+      "outputPath": "D:\\AAAAAAAAA\\Ecommerce\\Ecommerce\\Ecommerce.DataAccessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

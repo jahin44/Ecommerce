@@ -3,10 +3,9 @@ import Product from "../product/product";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const Products = () => {
-  const [productsToDisplay, setProductsToDisplay] = useState([{}]);
-  const [cart, setCart] = useState([]);
-  
+const Products = ({cart,setCart}) => {
+  const [productsToDisplay, setProductsToDisplay] = useState([]);
+
   const addToCart = (id, name) => {
     let cartItems = [...cart];
     let isUnique = true;
@@ -23,8 +22,6 @@ const Products = () => {
       ];
     }
     setCart(cartItems);
-    localStorage.setItem("CartItems",JSON.stringify(cart));
-    console.log(cart);
   };
 
   useEffect(() => {
@@ -33,7 +30,6 @@ const Products = () => {
       .get("https://localhost:7137/api/products")
       .then((res) => {
         setProductsToDisplay(res.data);
-        console.log(productsToDisplay, "================================");
       })
       .catch((err) => console.error(err));
   }, []);

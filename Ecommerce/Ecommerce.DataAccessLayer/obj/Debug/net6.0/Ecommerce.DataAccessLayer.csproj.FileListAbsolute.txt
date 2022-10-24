@@ -10,3 +10,15 @@ D:\Ecommerce\Ecommerce\Ecommerce.DataAccessLayer\obj\Debug\net6.0\Ecommerce.Data
 D:\Ecommerce\Ecommerce\Ecommerce.DataAccessLayer\obj\Debug\net6.0\refint\Ecommerce.DataAccessLayer.dll
 D:\Ecommerce\Ecommerce\Ecommerce.DataAccessLayer\obj\Debug\net6.0\Ecommerce.DataAccessLayer.pdb
 D:\Ecommerce\Ecommerce\Ecommerce.DataAccessLayer\obj\Debug\net6.0\ref\Ecommerce.DataAccessLayer.dll
+D:\AAAAAAAAA\Ecommerce\Ecommerce\Ecommerce.DataAccessLayer\bin\Debug\net6.0\Ecommerce.DataAccessLayer.deps.json
+D:\AAAAAAAAA\Ecommerce\Ecommerce\Ecommerce.DataAccessLayer\bin\Debug\net6.0\Ecommerce.DataAccessLayer.dll
+D:\AAAAAAAAA\Ecommerce\Ecommerce\Ecommerce.DataAccessLayer\bin\Debug\net6.0\Ecommerce.DataAccessLayer.pdb
+D:\AAAAAAAAA\Ecommerce\Ecommerce\Ecommerce.DataAccessLayer\obj\Debug\net6.0\Ecommerce.DataAccessLayer.csproj.AssemblyReference.cache
+D:\AAAAAAAAA\Ecommerce\Ecommerce\Ecommerce.DataAccessLayer\obj\Debug\net6.0\Ecommerce.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\AAAAAAAAA\Ecommerce\Ecommerce\Ecommerce.DataAccessLayer\obj\Debug\net6.0\Ecommerce.DataAccessLayer.AssemblyInfoInputs.cache
+D:\AAAAAAAAA\Ecommerce\Ecommerce\Ecommerce.DataAccessLayer\obj\Debug\net6.0\Ecommerce.DataAccessLayer.AssemblyInfo.cs
+D:\AAAAAAAAA\Ecommerce\Ecommerce\Ecommerce.DataAccessLayer\obj\Debug\net6.0\Ecommerce.DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\AAAAAAAAA\Ecommerce\Ecommerce\Ecommerce.DataAccessLayer\obj\Debug\net6.0\Ecommerce.DataAccessLayer.dll
+D:\AAAAAAAAA\Ecommerce\Ecommerce\Ecommerce.DataAccessLayer\obj\Debug\net6.0\refint\Ecommerce.DataAccessLayer.dll
+D:\AAAAAAAAA\Ecommerce\Ecommerce\Ecommerce.DataAccessLayer\obj\Debug\net6.0\Ecommerce.DataAccessLayer.pdb
+D:\AAAAAAAAA\Ecommerce\Ecommerce\Ecommerce.DataAccessLayer\obj\Debug\net6.0\ref\Ecommerce.DataAccessLayer.dll

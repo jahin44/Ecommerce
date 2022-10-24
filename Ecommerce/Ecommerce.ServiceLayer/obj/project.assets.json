@@ -1913,11 +1913,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Ecommerce\\Ecommerce\\Ecommerce.ServiceLayer\\Ecommerce.ServiceLayer.csproj",
+      "projectUniqueName": "D:\\AAAAAAAAA\\Ecommerce\\Ecommerce\\Ecommerce.ServiceLayer\\Ecommerce.ServiceLayer.csproj",
       "projectName": "Ecommerce.ServiceLayer",
-      "projectPath": "D:\\Ecommerce\\Ecommerce\\Ecommerce.ServiceLayer\\Ecommerce.ServiceLayer.csproj",
+      "projectPath": "D:\\AAAAAAAAA\\Ecommerce\\Ecommerce\\Ecommerce.ServiceLayer\\Ecommerce.ServiceLayer.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Ecommerce\\Ecommerce\\Ecommerce.ServiceLayer\\obj\\",
+      "outputPath": "D:\\AAAAAAAAA\\Ecommerce\\Ecommerce\\Ecommerce.ServiceLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1934,8 +1934,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Ecommerce\\Ecommerce\\Ecommerce.DataAccessLayer\\Ecommerce.DataAccessLayer.csproj": {
-              "projectPath": "D:\\Ecommerce\\Ecommerce\\Ecommerce.DataAccessLayer\\Ecommerce.DataAccessLayer.csproj"
+            "D:\\AAAAAAAAA\\Ecommerce\\Ecommerce\\Ecommerce.DataAccessLayer\\Ecommerce.DataAccessLayer.csproj": {
+              "projectPath": "D:\\AAAAAAAAA\\Ecommerce\\Ecommerce\\Ecommerce.DataAccessLayer\\Ecommerce.DataAccessLayer.csproj"
             }
           }
         }
