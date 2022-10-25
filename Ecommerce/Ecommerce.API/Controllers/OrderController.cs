@@ -1,5 +1,6 @@
 ﻿using Ecommerce.ServiceLayer.BusinessModel;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using static Ecommerce.ServiceLayer.CQRS.Commands;
@@ -7,6 +8,7 @@ using static Ecommerce.ServiceLayer.CQRS.Queries;
 
 namespace Ecommerce.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class OrderController : ControllerBase

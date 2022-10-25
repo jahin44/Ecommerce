@@ -9,25 +9,33 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 const Dashboard = () => {
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
-  
+  let Token = localStorage.getItem("Token");
+
   let isOrderSuccess = true;
   const navigate = useNavigate();
 
   const orderClick = async () => {
+    let Token = localStorage.getItem("Token");
+
     if (window.confirm("Do You want Order?") == true) {
-    try {
-      await axios
-        .post("https://localhost:7137/api/Order", cartItems)
-        .then((res) => {
-          if (res.status === 200) {
-            setTotalPrice(0);
-            setCartItems([]);
-          } else{ navigate("/LogIn");}
-        })
-        .catch((err) => console.error(err));
-    } catch (err) {
-      console.log(err);
-    }}
+      try {
+        await axios
+          .post("https://localhost:7137/api/Order", cartItems, {
+            headers: { Authorization: `Bearer ${Token}` },
+          })
+          .then((res) => {
+            if (res.status === 200) {
+              setTotalPrice(0);
+              setCartItems([]);
+            } else {
+              navigate("/LogIn");
+            }
+          })
+          .catch((err) => console.error(err));
+      } catch (err) {
+        console.log(err);
+      }
+    }
   };
   useEffect(() => {
     for (let i in cartItems) {
@@ -35,6 +43,10 @@ const Dashboard = () => {
       console.log(totalPrice);
     }
   }, [cartItems]);
+
+  useEffect(() => {
+    let Token = localStorage.getItem("Token");
+  });
 
   return (
     <>
@@ -54,7 +66,6 @@ const Dashboard = () => {
         {cartItems.map((product) => (
           <Cart product={product} />
         ))}
-       
       </div>
     </>
   );

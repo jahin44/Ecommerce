@@ -10,7 +10,7 @@ using static Ecommerce.ServiceLayer.CQRS.Queries;
 
 namespace Ecommerce.API.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase

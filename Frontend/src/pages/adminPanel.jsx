@@ -11,6 +11,7 @@ const AdminPanel = () => {
   const [price, setPrice] = useState();
   const [id, setId] = useState(0);
   const navigate = useNavigate();
+  let Token = localStorage.getItem("Token");
 
   const addProduct = async () => {
     setId(0);
@@ -19,41 +20,16 @@ const AdminPanel = () => {
     setStock(0);
   };
   const deleteProduct = async (Id) => {
+    let Token = localStorage.getItem("Token");
     console.log(Id);
     if (window.confirm("Do You want Delete this product?") == true) {
       try {
         axios
-          .delete("https://localhost:7137/api/Products/" + Id)
-          .then((res) => {
-            if (res.status === 200) {
-            }
+          .delete("https://localhost:7137/api/Products/" + Id, {
+            headers: { Authorization: `Bearer ${Token}` },
           })
-          .catch((err) => console.error(err));
-      } catch (err) {
-        console.log(err);
-      }
-    } window.location.reload();
-  };
-  const editProduct = async (product) => {
-    setId(product.id);
-    setName(product.name);
-    setPrice(product.price);
-    setStock(product.stock);
-    
-  };
-  const submit = async () => {
-
-    console.log("Id: "+id+"Name: " +name+"price: " +price+"sotck: "+stock);
-    if (window.confirm("Are you sure") == true) {
-    if(id === 0){
-    try {
-        axios
-          .post("https://localhost:7137/api/Products",{name:name, price:price, stock:stock})
           .then((res) => {
             if (res.status === 200) {
-              setProducts(res.data);
-              console.log("Success");
-              setId(0);
             }
           })
           .catch((err) => console.error(err));
@@ -61,27 +37,66 @@ const AdminPanel = () => {
         console.log(err);
       }
     }
-    else{
+    window.location.reload();
+  };
+  const editProduct = async (product) => {
+    setId(product.id);
+    setName(product.name);
+    setPrice(product.price);
+    setStock(product.stock);
+  };
+  const submit = async () => {
+    let Token = localStorage.getItem("Token");
+    console.log(Token);
+    if (window.confirm("Are you sure") == true) {
+      if (id === 0) {
         try {
-            axios
-              .put("https://localhost:7137/api/Products",{id:id,name:name, price:price, stock:stock})
-              .then((res) => {
-                if (res.status === 200) {
-                  setProducts(res.data);
-                  console.log("Success");
-                  setId(0);
-                }
-              })
-              .catch((err) => console.error(err));
-          } catch (err) {
-            console.log(err);
-          }
-    }}
+          axios
+            .post(
+              "https://localhost:7137/api/Products",
+              { name: name, price: price, stock: stock },
+              { headers: { Authorization: `Bearer ${Token}` } }
+            )
+            .then((res) => {
+              if (res.status === 200) {
+                setProducts(res.data);
+                console.log("Success");
+                setId(0);
+              }
+            })
+            .catch((err) => console.error(err));
+        } catch (err) {
+          console.log(err);
+        }
+      } else {
+        try {
+          axios
+            .put(
+              "https://localhost:7137/api/Products",
+              { id: id, name: name, price: price, stock: stock },
+              { headers: { Authorization: `Bearer ${Token}` } }
+            )
+            .then((res) => {
+              if (res.status === 200) {
+                setProducts(res.data);
+                console.log("Success");
+                setId(0);
+              }
+            })
+            .catch((err) => console.error(err));
+        } catch (err) {
+          console.log(err);
+        }
+      }
+    }
   };
   useEffect(() => {
+    let Token = localStorage.getItem("Token");
     try {
       axios
-        .get("https://localhost:7137/api/Products")
+        .get("https://localhost:7137/api/Products", {
+          headers: { Authorization: `Bearer ${Token}` },
+        })
         .then((res) => {
           if (res.status === 200) {
             setProducts(res.data);
@@ -113,9 +128,12 @@ const AdminPanel = () => {
               <td>{product.stock}</td>
               <td>{product.price}</td>
               <td>
-                <button className="btn" onClick={() => {
+                <button
+                  className="btn"
+                  onClick={() => {
                     editProduct(product);
-                  }}>
+                  }}
+                >
                   Edit
                 </button>
                 <button
@@ -149,7 +167,7 @@ const AdminPanel = () => {
             />
           </label>
           <label className="input">
-            Price 
+            Price
             <input
               type="number"
               value={price}

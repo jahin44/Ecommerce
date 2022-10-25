@@ -3,14 +3,17 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import classes from "./reports.css";
 
-
 const Reports = () => {
   const [reports, setReports] = useState([]);
+  let Token = localStorage.getItem("Token");
 
   useEffect(() => {
+    let Token = localStorage.getItem("Token");
     try {
       axios
-        .get("https://localhost:7137/api/order")
+        .get("https://localhost:7137/api/order", {
+          headers: { Authorization: `Bearer ${Token}` },
+        })
         .then((res) => {
           if (res.status === 200) {
             setReports(res.data);
