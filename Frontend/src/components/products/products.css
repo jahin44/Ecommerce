@@ -1,6 +1,7 @@
 /* videos component */
 .products {
-    width: 99%;
+    width: 75%;
+    position: absolute;
     display: grid;
     margin: 3rem auto;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

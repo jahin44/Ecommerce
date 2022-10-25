@@ -14,7 +14,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   const orderClick = async () => {
-    console.log(cartItems);
+    if (window.confirm("Do You want Order?") == true) {
     try {
       await axios
         .post("https://localhost:7137/api/Order", cartItems)
@@ -27,7 +27,7 @@ const Dashboard = () => {
         .catch((err) => console.error(err));
     } catch (err) {
       console.log(err);
-    }
+    }}
   };
   useEffect(() => {
     for (let i in cartItems) {
@@ -44,6 +44,7 @@ const Dashboard = () => {
         <button className="order" onClick={orderClick}>
           Order
         </button>
+        <div className="price">Total Price={totalPrice}</div>
         <table className="table_row">
           <tr>
             <th>Name</th>
@@ -53,7 +54,7 @@ const Dashboard = () => {
         {cartItems.map((product) => (
           <Cart product={product} />
         ))}
-        <div className="price">ToTal Price={totalPrice}</div>
+       
       </div>
     </>
   );

@@ -14,7 +14,15 @@
     color: rgb(83, 8, 8);
 
   }
+  .price{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0.5rem 0;
+  }
   .cart{
+    position: fixed;
+    top: 123px;
+    right: 34px;
     max-width: 400px;
     height: fit-content;
     background-color: #fff;

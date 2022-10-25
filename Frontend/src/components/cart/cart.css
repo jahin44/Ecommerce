@@ -10,6 +10,9 @@
   }
   
   .cart p {
+    position: fixed;
+    top: 123px;
+    right: 34px;
     font-size: 16px;
     font-weight: 500;
     margin: 0.5rem 0;
