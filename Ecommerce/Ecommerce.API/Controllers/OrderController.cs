@@ -40,5 +40,10 @@ namespace Ecommerce.API.Controllers
 
             }
         }
+        [HttpGet]
+        public async Task<List<OrderReport>> Get()
+        {
+            return await _mediator.Send(new GetOrderReportsListQuery());
+        }
     }
 }

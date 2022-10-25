@@ -1,0 +1,45 @@
+.tableReport{
+    margin-top: 100px;
+
+}
+.input{
+    display: block;
+}
+.form{
+    width: 213px;
+    position: fixed;
+    top: 123px;
+    right: 34px;
+}
+.btn{
+    background-color: #ccd1ca; /* Green */
+    border: none;
+    color: #b50b0b;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .btn:hover{
+    background-color: #1fa712;
+    color: #8f0c0c;
+  
+  }
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

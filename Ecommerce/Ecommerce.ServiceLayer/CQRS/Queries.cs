@@ -1,4 +1,5 @@
-﻿using Ecommerce.ServiceLayer.Model;
+﻿using Ecommerce.ServiceLayer.BusinessModel;
+using Ecommerce.ServiceLayer.Model;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace Ecommerce.ServiceLayer.CQRS
     public class Queries
     {
         public record GetProductListQuery() : IRequest<List<Product>>;
+        public record GetOrderReportsListQuery() : IRequest<List<OrderReport>>;
         public record GetProductByIdQuery(int Id) : IRequest<Product>;
     }
 }
